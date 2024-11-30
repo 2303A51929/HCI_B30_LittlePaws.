@@ -1,0 +1,82 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Menu</title>
+    <style>
+        /* Sidebar Menu Styles */
+        .sidebar-menu {
+            position: fixed;
+            left: -250px; /* Initially hidden off-screen */
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding-top: 60px;
+            transition: left 0.3s ease;
+        }
+
+        .sidebar-menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar-menu a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Button Styles */
+        #sidebar-toggle-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Close the sidebar when clicked */
+        #sidebar-menu a:last-child {
+            background-color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar-menu" class="sidebar-menu">
+        <a href="http://127.0.0.1:5500/Ass/essentials.html" onclick="showPage('essentials.html')">Essentials</a>
+        <a href="http://127.0.0.1:5500/Ass/nutrition.html" onclick="showPage('nutrition.html')">Nutrition</a>
+        <a href="http://127.0.0.1:5500/Ass/health.html" onclick="showPage('health.html')">Health</a>
+        <a href="http://127.0.0.1:5500/Ass/grooming.html" onclick="showPage('grooming.html')">Grooming</a>
+        <a href="http://127.0.0.1:5500/Ass/others.html" onclick="showPage('others.html')">Others</a>
+        <a href="#" onclick="toggleMenu()">Close</a>
+    </div>
+
+    <!-- Button to toggle Sidebar -->
+    <button id="sidebar-toggle-btn" onclick="toggleMenu()">Menu</button>
+
+    <script>
+        // Function to toggle the sidebar menu
+        function toggleMenu() {
+            const menu = document.getElementById('sidebar-menu');
+            if (menu.style.left === '0px') {
+                menu.style.left = '-250px'; // Hide the menu
+            } else {
+                menu.style.left = '0px'; // Show the menu
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Paws</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+    <div class="header">
+        <span class="menu-icon" onclick="toggleMenu()">☰ </span>
+            <div class="logo1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrZUZTjOVKlo1LV2pgmIlmWRTJplIjEkQkDg&s">
+                <h1 class="logo">PAWS & PLAYS</h1>
+          
+                <div class="top-bar">
+                    <a href="http://127.0.0.1:5500/little%20paws/cart/cart.html" class="cart-icon">
+                        🛒 <span id="cart-count">0</span>
+                    
+                    </a>
+                   
+                </div>
+            </header>
+
+                 <!-- Top Bar -->
+    <nav class="top-bar">
+        <div class="top-bar">
+            <a href="order-tracking.html" class="top-bar-link">Track your order</a>
+            <a href="login.html" class="top-bar-link">Login/Register</a>
+        </div>        
+        <a href="http://127.0.0.1:5500/little%20paws/wishlist.html" class="wishlist-icon">❤ Wishlist</a>
+    </nav>
+  
+   
+    <!-- Sidebar Menu -->
+    <div id="sidebar-menu" class="sidebar-menu">
+        <a href="http://127.0.0.1:5500/little%20paws/sidebar/essentials.html">Essentials</a>
+        <a href="http://127.0.0.1:5500/little%20paws/sidebar/nutrition.html">Nutrition</a>
+        <a href="http://127.0.0.1:5500/little%20paws/sidebar/health.html">Health</a>
+        <a href="http://127.0.0.1:5500/little%20paws/sidebar/grooming.htm">Grooming</a>
+        <a href="#others.html">Others</a>
+        <a href="#" onclick="toggleMenu()">Close</a>
+    </div>
+        
+        <div class="categories">
+            <div class="category-item">
+                <a href="small-breed.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ8uTplcv-YslfLxxxBTt1yGeqUIPS1-cS1g&s" alt="Small Breed">
+                    <p>Small Breed</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="puppy.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC37YYUjhlKwR43veT8g28rfPH_dP9aaDbbw&s" alt="Puppy">
+                    <p>Puppy</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="large-breed.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmFuRXdMUn1LUDON9HMWB9rETp90ucuTA3xw&s" alt="Large Breed">
+                    <p>Large Breed</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="trendy-offers.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsfzE5NwZrQF_CmJSjDuKKtEAbcuPoYYhLFQ&s" alt="Trendy Offers">
+                    <p>Trendy Offers%</p>
+                </a>
+            </div>
+        </div>
+    
+    
+    <!-- Main Content -->
+    <main>
+        <h2>Welcome to Little Paws!</h2>
+        <p>Your one-stop shop for all your pet's needs.</p>
+   
+
+    <!-- Products Section -->
+    <section class="deals">
+        <h2>Today's Deals</h2>
+        <div class="product-container">
+
+            <div class="product-card">
+           <div class="product-wishlist" onclick="addToWishlist('Belt', 300)">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist"  >
+            </div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo5e6ayE6t2zwI1BDjn1_HfSpRUwf7CFjDlw&s"width="250" height="250" alt="Belt">
+                <h3>Belt</h3>
+                <p>₹300/-</p>
+                <button onclick="addToCart('Belt', 300)">Add to Cart</button>
+            </div>
+        </div>
+                    
+                        <div class="product-card">
+                    <div class="product-wishlist" onclick="addToWishlist('Bed', 800)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                    </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1oyFPQo8SQspztfYtZCcNQjGzZSvOBbpUoA&s"width="250" height="250" alt="Bed">
+                    <h3>Bed</h3>
+                    <p>₹800/-</p>
+                    <button onclick="addToCart('Bed', 800)">Add to Cart</button>
+                </div>
+                                     
+                        <div class="product-card">
+                    <div class="product-wishlist" onclick="addTowishlist('Socks',250)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                    </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVo4SIrKDY5icnHMdLUGEh1aBnmK2WE_p-SQ&s" width="250" height="250" alt="Socks">
+                        <h3>Socks</h3>
+                        <p>₹250/-</p>
+                        <button onclick="addToCart('Socks', 250)">Add to Cart</button>
+                    </div>
+        
+                            <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('Dry food', 450)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist">
+                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBY55kGQ5hl-SQyJZqSNRZCINfEtuPFztyfA&s" width="250" height="250" alt="Dry food">
+                        <h3>Dry food</h3>
+                        <p>₹450/-</p>
+                        <button onclick="addToCart('Dry food', 450)">Add to Cart</button>
+                </div>
+            </div>
+       
+            <div class="product-card">
+                <div class="product-wishlist" onclick="addToWishlist('Bones', 199)">
+                    <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVg_6M4g4ytm8D4s07XRjs8FU7MlGWlB-DvQ&s"width="250" height="250" alt="Bones"> 
+                <h3>Bones</h3>
+                <p>199rs/-</p>
+                <button onclick="addToCart('Bones',199)">Add to Cart</button>
+                </div>
+    
+                <div class="product-card">
+                    <div class="product-wishlist" onclick="addToWishlist('chew', 200)">
+                        <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                    </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHextCPp_4uOSmYq1YxLQVQ0lpov0fFd7H6w&s"width="150" height="200" alt="chew">
+                    <h3>chew</h3>
+                    <p>200rs/-</p>
+                    <button onclick="addToCart('chew', 200)">Add to Cart</button>
+                    </div>
+    
+                    <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('Soft toys', 250)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist">
+                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsw-Gw5F-EP_L5bRanT6qw9LTNZjUvVdg-6Q&s"width="300" height="200" alt=" Soft toys">
+                        <h3>Soft toys</h3>
+                        <p>250rs/-</p>
+                        <button onclick="addToCart('Soft toys', 250)">Add to Cart</button>
+                        </div>
+    
+                        <div class="product-card">
+                            <div class="product-wishlist" onclick="addToWishlist('Comb',159)">
+                                <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                            </div>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDvlbePEGDhK0WCO6ofmXpMihgYT0Yw8GIPw&s" width="150" height="200" alt="Comb">
+                            <h3>Comb</h3>
+                            <p>159rs/-</p>
+                    <button onclick="addToCart('Comb', 159)">Add to Cart</button>
+                      </div>
+    
+                      <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('nail cutter', 120)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                        </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqvlvwq4LKk2LpA2YDjEWO2D73r6ifDmm0ag&s"width="150" height="200" alt="nail cutter">
+                    <h3>Nails cutter</h3>
+                     <p>120rs/-</p>
+                      <button onclick="addToCart('Nails cutter',120)">Add to Cart</button>
+                    </div>
+    
+                    <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('soap',99)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                        </div>
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUoaWvRyZM7v6V0GLYSvwW2YIv4NWIdI8A_Q&s"width="150" height="200" alt="soap">
+                     <h3>soap</h3>
+                     <p>99rs/-</p>
+                     <button onclick="addToCart('soap',99)">Add to Cart</button>
+                    </div>
+    
+                    <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('shampoo', 100)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                        </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBt1YqHJbCZ96O54r_r9WxJa7y58qtNmM5Hg&s"width="150" height="200" alt="shampoo">
+                    <h3>shampoo</h3>
+                    <p>100rs/-</p>
+                    <button onclick="event.stopPropagation(); addToCart('shampoo',100)">Add to Cart</button>
+                    </div>
+    
+                    <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('Toothbrush',69)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                        </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBJfYcRHRXFSfn6ab8nP46br2ehGN7FGt-2w&s"width="150" height="200" alt="Toothbrush">
+                     <h3>Toothbrush</h3>
+                    <p>69rs/-</p>
+                    <button onclick="addToCart('Toothbrush',69)">Add to Cart</button>
+                     </div>
+    
+                     <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('Dogcage', 600)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                        </div>
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTou4MXydTauPylfs2d2ppp85ut0LO7p6EhBw&s"width="150" height="200" alt="Dogcage">
+                    <h3>Dog cage</h3>
+                     <p>600rs/-</p>
+                    <button onclick="addToCart('Dog cage',600)">Add to Cart</button>
+                     </div>
+    
+                     <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('Smallcage', 400)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                        </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWnfKw30R3Jsd2FCLIQtPu1G1OGkMfR30GAA&s"width="150" height="200" alt="Smallcage">
+                    <h3>Smallcage</h3>
+                    <p>400rs/-</p>
+                    <button onclick="addToCart('Small cage',400)">Add to Cart</button>
+                    </div>
+    
+                    <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('Travelbag', 800)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                        </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbWy7Zgrs4Ngq3PBt7Dyt9B6aiPYoZPGY94g&s"width="150" height="200" alt="Travelbag">
+                    <h3>Travel bag</h3>
+                    <p>500rs/-</p>
+                    <button onclick=" addToCart('Travelbag',500)">Add to Cart</button>
+                    </div>
+    
+                    <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('Wet food', 150)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                        </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyLdjxYzmcPhmSxsZ2aU_q-ci5qH0qx5RpZg&s"width="150" height="200" alt="Wet food">
+                    <h3>Wet food</h3>
+                    <p>150rs/-</p>
+                    <button onclick="addToCart('Wet food',150)">Add to Cart</button>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-wishlist" onclick="addToWishlist('Treats', 100)">
+                            <img src="https://cdn-icons-png.flaticon.com/512/833/833300.png" alt="Wishlist" >
+                        </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLkJQpJgQu584tcSolb1xvkMh-SW_wt2T5xg&s"width="150" height="200" alt="Treats">
+                    <h3>Treats</h3>
+                    <p>100rs/-</p>
+                    <button onclick="addToCart('Treats',100)">Add to Cart</button>
+                    </div>
+
+ </main>
+    <script src="script.js"></script>
+</body>
+</html>

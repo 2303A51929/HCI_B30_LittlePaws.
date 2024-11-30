@@ -1,0 +1,132 @@
+// Toggle Sidebar Menu
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-250px';
+    } else {
+        sidebar.style.left = '0px';
+    }
+}
+
+// Cart Data
+let cart = [];
+
+// Function to Add Item to Cart
+function addToCart(productName, productPrice) {
+    const productIndex = cart.findIndex(item => item.name === productName);
+    if (productIndex === -1) {
+        // Add new product to the cart
+        cart.push({ name: productName, price: productPrice, quantity: 1 });
+        alert(${productName} has been added to the cart!);
+    } else {
+        // Increment the quantity of the existing product
+        cart[productIndex].quantity += 1;
+        alert(${productName} quantity updated in the cart!);
+    }
+
+    // Update Cart Count
+    updateCartCount();
+    saveCartToLocalStorage();
+}
+
+// Update Cart Count Display
+function updateCartCount() {
+    const cartCountElement = document.getElementById('cart-count');
+    const totalItems = cart.reduce((count, item) => count + item.quantity, 0);
+    cartCountElement.textContent = totalItems;
+}
+
+// Save Cart Data to Local Storage
+function saveCartToLocalStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+// Load Cart Data from Local Storage
+function loadCartFromLocalStorage() {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+    }
+    updateCartCount();
+}
+
+// Remove an Item from the Cart
+function removeFromCart(productName) {
+    cart = cart.filter(item => item.name !== productName);
+    saveCartToLocalStorage();
+    loadCartFromLocalStorage();
+}
+
+// Initialize Cart Data
+function initializeCart() {
+    loadCartFromLocalStorage();
+}
+
+// Initialize on Page Load
+initializeCart();
+
+
+// Wishlist Data
+let wishlist = [];
+
+// Function to Add Item to Wishlist
+function addToWishlist(productName, productPrice) {
+    const productIndex = wishlist.findIndex(item => item.name === productName);
+    if (productIndex === -1) {
+        // Add new product to the wishlist
+        wishlist.push({ name: productName, price: productPrice });
+        alert(${productName} has been added to your wishlist!);
+    } else {
+        alert(${productName} is already in your wishlist!);
+    }
+
+    saveWishlistToLocalStorage();
+    updateWishlistCount();
+}
+
+// Update Wishlist Count Display
+function updateWishlistCount() {
+    const wishlistCountElement = document.getElementById('wishlist-count');
+    wishlistCountElement.textContent = wishlist.length;
+}
+
+// Save Wishlist Data to Local Storage
+function saveWishlistToLocalStorage() {
+    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+}
+
+// Load Wishlist Data from Local Storage
+function loadWishlistFromLocalStorage() {
+    const savedWishlist = localStorage.getItem('wishlist');
+    if (savedWishlist) {
+        wishlist = JSON.parse(savedWishlist);
+    }
+    updateWishlistCount();
+}
+
+// Remove an Item from the Wishlist
+function removeFromWishlist(productName) {
+    wishlist = wishlist.filter(item => item.name !== productName);
+    saveWishlistToLocalStorage();
+    loadWishlistFromLocalStorage();
+}
+
+// Initialize Wishlist Data
+function initializeWishlist() {
+    loadWishlistFromLocalStorage();
+}
+
+// Initialize on Page Load
+initializeWishlist();
+
+
+// Toggle Sidebar Menu
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar-menu');
+    sidebar.classList.toggle('active');
+}
+
+// Update Cart Count Placeholder (if applicable)
+function toggleCart() {
+    alert("Cart functionality coming soon!");
+}

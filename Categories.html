@@ -1,0 +1,79 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-item {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .category-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image fits within the circle */
+            border: 2px solid #ddd;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .category-item img:hover {
+            transform: scale(1.1); /* Slight zoom effect on hover */
+            border-color: #007BFF;
+        }
+
+        .category-item p {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="categories">
+        <div class="category-item">
+            <a href="small-breed.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ8uTplcv-YslfLxxxBTt1yGeqUIPS1-cS1g&s" alt="Small Breed">
+                <p>Small Breed</p>
+            </a>
+        </div>
+        <div class="category-item">
+            <a href="puppy.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC37YYUjhlKwR43veT8g28rfPH_dP9aaDbbw&s" alt="Puppy">
+                <p>Puppy</p>
+            </a>
+        </div>
+        <div class="category-item">
+            <a href="large-breed.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmFuRXdMUn1LUDON9HMWB9rETp90ucuTA3xw&s" alt="Large Breed">
+                <p>Large Breed</p>
+            </a>
+        </div>
+        <div class="category-item">
+            <a href="trendy-offers.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsfzE5NwZrQF_CmJSjDuKKtEAbcuPoYYhLFQ&s" alt="Trendy Offers">
+                <p>Trendy Offers%</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
